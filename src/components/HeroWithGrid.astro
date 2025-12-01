@@ -1,0 +1,149 @@
+---
+// HeroWithGrid.astro
+// This component creates a clean hero section with a three-column photo grid
+// inspired by danmiloch.com
+
+interface Props {
+  name: string;
+  title: string;
+  description?: string;
+}
+
+const { name, title, description } = Astro.props;
+---
+
+<section class="hero-section">
+  <div class="hero-container">
+    {/* Text Content */}
+    <div class="hero-text">
+      <h1 class="hero-name">{name}</h1>
+      <p class="hero-title">{title}</p>
+      {description && <p class="hero-description">{description}</p>}
+    </div>
+
+    {/* Three Photo Grid */}
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img 
+          src="/images/photo1.jpg" 
+          alt="Project or work 1"
+          loading="lazy"
+        />
+      </div>
+      <div class="photo-item">
+        <img 
+          src="/images/photo2.jpg" 
+          alt="Project or work 2"
+          loading="lazy"
+        />
+      </div>
+      <div class="photo-item">
+        <img 
+          src="/images/photo3.jpg" 
+          alt="Project or work 3"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #ffffff;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Text Styling */
+  .hero-text {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Three Photo Grid */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .photo-item {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .photo-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-name {
+      font-size: 2rem;
+    }
+
+    .hero-title {
+      font-size: 1.25rem;
+    }
+
+    .photo-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .hero-text {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

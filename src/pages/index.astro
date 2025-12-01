@@ -1,51 +1,260 @@
 ---
-import Layout from '../layouts/Layout.astro';
-const pageTitle = "Milky-Way";
+// src/pages/index.astro
 ---
-<Layout pageTitle={pageTitle}>
-    <div class="gif">
-        <img src="/.netlify/images?url=/images/space.webp" role="presentation" width="300" height="259" decoding="async">
-    </div>
-    <h1>Milky-Way</h1>
-    <span class="badge">Digital Craftsman (Developer)</span>
-    <h2>About</h2>
-    <p>
-        Praesent malesuada mi nisi, quis tempus magna venenatis ut.
-        Suspendisse tempor sem at scelerisque congue. Curabitur mollis,
-        mi id molestie finibus, metus sem sagittis nunc, euismod feugiat orci neque non lorem.
-        Aenean sollicitudin erat eu molestie tempus. Nunc ac eros elementum, fermentum lacus at,
-        pellentesque mauris. Suspendisse eros neque, interdum euismod consectetur convallis,
-        porttitor at massa. Phasellus a ultrices arcu. Donec viverra, lorem in pellentesque euismod,
-        libero justo gravida nibh, non ultricies justo purus ultrices est.
-    </p>
-    <p>
-        Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat accumsan.
-        Proin semper semper dui nec feugiat. Donec cursus neque id aliquet finibus. Morbi
-        facilisis turpis nibh, nec dictum orci dictum nec. In hac habitasse platea dictumst.
-        Maecenas mollis turpis vitae turpis bibendum, vitae tristique arcu eleifend.
-    </p>
-    <div class="center">
-        <a href="/works/">
-            <button class="btn">My portfolio</button>
-        </a>
-    </div>
-    <h2>Skills</h2>
-    <div class="skills center">
-        <img class="skills__img" width="46" height="46" alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="Golang" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"/>
-        <img class="skills__img" width="46" height="46" alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
-		<img class="skills__img" width="46" height="46" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"/>
-		<img class="skills__img" width="46" height="46" alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"/>
-		<img class="skills__img" width="46" height="46" alt="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="Kubernetes" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"/>
-        <img class="skills__img" width="46" height="46" alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"/>
-    </div>
-    <h2>Interests</h2>
-    <p>
-        Ut at interdum dui. Donec ut ante ex. Maecenas id ex eget nibh consequat accumsan.
-        Proin semper semper dui nec feugiat. Donec cursus neque id aliquet finibus. Morbi
-        facilisis turpis nibh, nec dictum orci dictum nec. In hac habitasse platea dictumst.
-        Maecenas mollis turpis vitae turpis bibendum, vitae tristique arcu eleifend.
-    </p>
-</Layout>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Kinkade</title>
+    <meta name="description" content="Jay Kinkade - Data Analytics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="nav-logo">JK</a>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="content-wrapper">
+            <div class="grid-container">
+                <div class="text-left">
+                    <h1>Jay Kinkade</h1>
+                    <p>Data Analytics</p>
+                </div>
+                
+                <div class="text-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</p>
+                </div>
+            </div>
+            
+            <div class="photo-grid">
+                <a href="#" class="photo-item">
+                    <img src="/images/work1.jpg" alt="Project 1">
+                </a>
+                
+                <a href="#" class="photo-item">
+                    <img src="/images/work2.jpg" alt="Project 2">
+                </a>
+                
+                <a href="#" class="photo-item">
+                    <img src="/images/work3.jpg" alt="Project 3">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="https://twitter.com/you" target="_blank">Twitter</a>
+        <a href="https://github.com/you" target="_blank">GitHub</a>
+        <a href="mailto:you@email.com">Email</a>
+    </footer>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: #1a1a1a;
+        background: #ffffff;
+        -webkit-font-smoothing: antialiased;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 4rem;
+        max-width: calc(850px + 8rem);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .nav-logo {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #9333ea !important;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.813rem;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #1a1a1a;
+    }
+
+    .main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 4rem 6rem;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 850px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .text-left {
+        grid-column: 1;
+    }
+
+    .text-left h1 {
+        font-size: 0.938rem;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.25rem;
+        color: #1a1a1a;
+    }
+
+    .text-left p {
+        font-size: 0.813rem;
+        font-weight: 300;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .text-right {
+        grid-column: 2 / 4;
+    }
+
+    .text-right p {
+        font-size: 0.813rem;
+        line-height: 1.6;
+        color: #888;
+        font-weight: 300;
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .photo-item {
+        display: block;
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .photo-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+    }
+
+    .photo-item:hover img {
+        transform: scale(1.03);
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 2rem 4rem;
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .footer a {
+        color: #888;
+        text-decoration: none;
+        font-size: 0.813rem;
+        transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+        color: #1a1a1a;
+    }
+
+    @media (max-width: 768px) {
+        .nav {
+            padding: 1.5rem;
+        }
+
+        .main {
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+
+        .text-left {
+            grid-column: 1;
+        }
+
+        .text-right {
+            grid-column: 1;
+        }
+
+        .photo-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .main {
+            padding: 3rem 2rem 4rem;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+        }
+
+        .photo-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
